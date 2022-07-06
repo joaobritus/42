@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:35:40 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/03 20:35:52 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/06 15:16:32 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,10 @@ void	rush(int x, int y)
 		{
 			if ((col == 1 || col == x) && (li == 1 || li == y))
 			{
-				if (col == 1 && li == 1)
+				if ((col == 1 && li == 1) || (col == x && li == y))
 					ft_putchar('/');
-				else if ((col == 1 && li == y) || (col == x && li == 1))
+				else 
 					ft_putchar('\\');
-				else if (col == x && li == y)
-					ft_putchar('/');
 			}
 			else if (col == 1 || col == x || li == 1 || li == y)
 				ft_putchar('*');
