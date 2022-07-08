@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 09:44:38 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/07 09:50:53 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/07 12:45:53 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/07 13:00:24 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int	zas;
+	int i;
 
-	zas = *a;
-	b* = *a; //normineteeeeee
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+
+	return (i);
 }
 
-int	main(void)
+int main(void)
 {
-	ft_swap(4, 5);
+	char *str = "asdasdas";
 
-	printf("%d", zas);
-	printf("%d", b*);
+	ft_strlen(str);
+	return (0);
 }

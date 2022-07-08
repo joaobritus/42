@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 09:44:38 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/07 09:50:53 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/08 12:39:20 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/08 13:10:43 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int	zas;
 
-	zas = *a;
-	b* = *a; //normineteeeeee
-}
+	int i;
+	int temp;
 
-int	main(void)
-{
-	ft_swap(4, 5);
-
-	printf("%d", zas);
-	printf("%d", b*);
+	i = 0;
+	while (i < size -1)
+	{
+		if (tab[i] > tab[i + 1])
+		{
+			temp = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = temp;
+			i = 0;
+		}
+		else
+			i++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 10:22:35 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/06 10:25:48 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/07 10:18:18 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,20 @@
 
 void	ft_putstr(char *str)
 {
-	str 
+   int i;
+
+	i = 0;
+ 	while(str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
+
+int	main()
+{
+char *str = "abcde\n";
+
+	ft_putstr(str);
+	return (0);
+}
