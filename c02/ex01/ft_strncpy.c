@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 12:45:53 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/09 12:32:43 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/09 15:59:39 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/09 16:50:39 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i < n && src[i] != '\0')
 	{
+		dest[i] = src[i];
 		i++;
 	}
-
-	return (i);
-}
-
-int main(void)
-{
-	char zas[] = "ananas";
-	ft_strlen(zas);
-	printf("%s\n", zas);
-	printf("%d", ft_strlen(zas));
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

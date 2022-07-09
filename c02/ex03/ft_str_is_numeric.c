@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 12:45:53 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/09 12:32:43 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/09 19:45:04 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		i++;
-	}
+		if (str[i] < 0 || str[i] > 9)
 
-	return (i);
-}
-
-int main(void)
-{
-	char zas[] = "ananas";
-	ft_strlen(zas);
-	printf("%s\n", zas);
-	printf("%d", ft_strlen(zas));
-}
