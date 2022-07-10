@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 09:30:30 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/10 09:44:11 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/10 12:08:54 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
+		if (str[i] < 32 || str[i] > 127)	
 			return(0);
 		else
 			i++;
@@ -29,10 +29,13 @@ int	ft_str_is_numeric(char *str)
 
 int	main(void)
 {
-	char 	a[] = "1234";
-	char 	b[] = "1234a";
+	char	a[] = "casou!@$%^&";
+	char	b[] = "65dgtdgf\t";
 	char	c[] = "";
-	printf("%d", ft_str_is_numeric(a));
-	printf("%d", ft_str_is_numeric(b));
-	printf("%d", ft_str_is_numeric(c));
+	char	d[] = "\v";
+
+	printf("%d\n", ft_str_is_printable(a));
+	printf("%d\n", ft_str_is_printable(b));
+	printf("%d\n", ft_str_is_printable(c));
+	printf("%d\n", ft_str_is_printable(d));
 }

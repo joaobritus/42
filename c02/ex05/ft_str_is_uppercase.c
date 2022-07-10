@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 09:30:30 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/10 09:38:04 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/10 09:43:35 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
+		if (str[i] < 'A' || str[i] > 'Z')
 			return(0);
 		else
 			i++;
@@ -29,10 +29,13 @@ int	ft_str_is_numeric(char *str)
 
 int	main(void)
 {
-	char 	a[] = "1234";
-	char 	b[] = "1234a";
-	char	c[] = "";
-	printf("%d", ft_str_is_numeric(a));
-	printf("%d", ft_str_is_numeric(b));
-	printf("%d", ft_str_is_numeric(c));
+	char a[] = "ABCDE";
+	char b[] = "abcde";
+	char c[] = "ABCDe";
+	char d[] = "";
+
+	printf("%d", ft_str_is_uppercase(a));
+	printf("%d", ft_str_is_uppercase(b));
+	printf("%d", ft_str_is_uppercase(c));
+	printf("%d", ft_str_is_uppercase(d));
 }

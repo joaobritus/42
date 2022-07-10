@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 09:30:30 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/10 10:54:13 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/10 11:01:12 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
-			return(0);
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] = str[i] - 32;
 		else
 			i++;
 	}
-	return(1);
+	return(str);
 }
 
 int	main(void)
 {
-	char 	a[] = "1234";
-	char 	b[] = "1234a";
-	char	c[] = "";
-	printf("%d", ft_str_is_numeric(a));
-	printf("%d", ft_str_is_numeric(b));
-	printf("%d", ft_str_is_numeric(c));
+	char a[] = "olagoodbye";
+	char b[] = "olAgOodbYe";
+	printf("%s", ft_strupcase(a));
+	printf("%s", ft_strupcase(b));
 }

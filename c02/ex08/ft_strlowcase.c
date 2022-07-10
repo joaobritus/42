@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 09:30:30 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/10 11:02:09 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/10 11:08:47 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strlowcase(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
-			return(0);
+		if (str[i] >= 65 && str[i] <= 90)
+			str[i] = str[i] + 32;
 		else
 			i++;
 	}
-	return(1);
+	return(str);
 }
 
 int	main(void)
 {
-	char 	a[] = "1234";
-	char 	b[] = "1234a";
-	char	c[] = "";
-	printf("%d", ft_str_is_numeric(a));
-	printf("%d", ft_str_is_numeric(b));
-	printf("%d", ft_str_is_numeric(c));
+	char a[] = "era uma vez um pato";
+	char b[] = "ERA UMA VEZ UM PATO";
+	char c[] = "perauvatangerinaANANAS";
+	char d[] = "PERAUVATANGERInaananas";
+	
+	printf("%s\n", ft_strlowcase(a));
+	printf("%s\n", ft_strlowcase(b));
+	printf("%s\n", ft_strlowcase(c));
+	printf("%s\n", ft_strlowcase(d));
 }

@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 17:29:52 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/09 19:39:32 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/10 09:20:13 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ int	ft_str_is_alpha(char *str)
 int	main(void)
 {
 	char a[] = "alfabeto;";
+	char b[] = "";
 	ft_str_is_alpha(a);
+	ft_str_is_alpha(b);
 	printf("%d", ft_str_is_alpha(a));
+	printf("%d", ft_str_is_alpha(b));
 }
 

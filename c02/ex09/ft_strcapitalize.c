@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 09:30:30 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/10 11:09:27 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/10 12:15:21 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strcapitalize(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
-			return(0);
-		else
+		if (str[i] >= 65 && str[i] <= 90)
+			str[i] = str[i] + 32;
 			i++;
 	}
-	return(1);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[0] >= 97 && str[0] <= 122)
+			str[0] = str[0] - 32;
+		else if (str[i] >= 32 && str[i] <= 64)//isto nao sao todos os caracteres especiais
+		{
+			if (str[i + 1] >= 97 && str[i + 1] <= 122)
+				str[i + 1] = str[i + 1] - 32;
+		}
+		i++;
+	}
+	return(str);
 }
 
 int	main(void)
 {
-	char 	a[] = "1234";
-	char 	b[] = "1234a";
-	char	c[] = "";
-	printf("%d", ft_str_is_numeric(a));
-	printf("%d", ft_str_is_numeric(b));
-	printf("%d", ft_str_is_numeric(c));
+	char a[] = "ola o*MEu-nOME$E^bRIto,topas?";
+	printf("%str", ft_strcapitalize(a));
 }
