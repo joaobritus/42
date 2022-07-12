@@ -6,29 +6,26 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 09:57:16 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/06 11:58:41 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/10 19:50:44 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
 
-int	main()
+/*int	main(void)
 {
-	int zas;
-	int *nbr;
+	int	zas;
+	int	*nbr;
 
 	zas = 54;
 	*nbr = zas;
 	printf("%d", *nbr);
-
 	ft_ft(nbr);
 	printf("%d", *nbr);
-}	
-		
-
+}*/

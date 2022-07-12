@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 11:09:27 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 12:15:21 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/11 19:18:28 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (str[0] >= 97 && str[0] <= 122)
 			str[0] = str[0] - 32;
-		else if (str[i] >= 32 && str[i] <= 64)//isto nao sao todos os caracteres especiais
+		else if ((str[i] >= 32 && str[i] <= 47) || (str[i] >= 58 && str[i] <= 64) || (str[i] >= 91 && str[i] <= 96) || str[i] >= 123)
 		{
 			if (str[i + 1] >= 97 && str[i + 1] <= 122)
 				str[i + 1] = str[i + 1] - 32;
@@ -40,6 +40,6 @@ char	*ft_strcapitalize(char *str)
 
 int	main(void)
 {
-	char a[] = "ola o*MEu-nOME$E^bRIto,topas?";
-	printf("%str", ft_strcapitalize(a));
+	char a[] = "ola o*MEu-nOME$E^bRIto,topas?123tudo.2bEm!";
+	printf("%s", ft_strcapitalize(a));
 }

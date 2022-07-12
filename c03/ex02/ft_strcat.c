@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:22:35 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 11:22:41 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/11 19:55:28 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/12 15:53:20 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>*/
+/*#include <string.h>
+#include <stdio.h>*/
 
-void	ft_putstr(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
+	int	srcl;
+	int	destl;
 
-	i = 0;
-	while (str[i] != '\0')
+	destl = 0;
+	while (dest[destl] != '\0')
 	{
-		write(1, &str[i], 1);
-		i++;
+		destl++;
 	}
+	srcl = 0;
+	while (src[srcl] != '\0')
+	{
+		dest[destl] = src[srcl];
+		destl++;
+		srcl++;
+	}
+	dest[destl] = '\0';
+	return (dest);
 }
 
-/*int	main()
+/*int	main(void)
 {
-	char *zas = "funciona, please";
-	ft_putstr(zas);
+	char a[] = "maca";
+	char b[] = "banana";
+	printf("%s", ft_strcat(a, b));
 }*/

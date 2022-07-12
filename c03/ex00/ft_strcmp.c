@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:22:35 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 11:22:41 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/11 19:20:27 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/12 15:03:18 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>*/
+/*#include <string.h>
+#include <stdio.h>*/
 
-void	ft_putstr(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
+	unsigned int	i;
+	unsigned char	a;
+	unsigned char	b;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s1[i] == s2[i])
 	{
-		write(1, &str[i], 1);
 		i++;
 	}
+	a = s1[i];
+	b = s2[i];
+	return (a - b);
 }
 
-/*int	main()
+/*int	main(void)
 {
-	char *zas = "funciona, please";
-	ft_putstr(zas);
+	char zaza[] = "alfabeto";
+	char zeze[] = "albabeto";
+
+	printf("%d\n", ft_strcmp(zaza, zeze));
+
+	printf("%d", strcmp(zaza, zeze));
 }*/

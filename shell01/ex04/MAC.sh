@@ -1,3 +1,3 @@
 #! /bin/sh
 
-ifconfig | grep ether | tr -d "ether" | tr -d " " | tr -d "	"
+ifconfig | grep ether | cut -c 8-32 | tr -d " "

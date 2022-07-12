@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:22:35 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 11:22:41 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/12 18:43:28 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/12 18:56:29 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>*/
+/*#include <stdio.h>*/
 
-void	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
 		i++;
-	}
+	return (i);
 }
 
-/*int	main()
+/*int	main(void)
 {
-	char *zas = "funciona, please";
-	ft_putstr(zas);
+	char	zaza[] = "bananasplit";
+	printf("%d", ft_strlen(zaza));
 }*/

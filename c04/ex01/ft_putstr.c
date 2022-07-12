@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:22:35 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 11:22:41 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/12 18:57:48 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/12 19:04:50 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <unistd.h>*/
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
@@ -20,12 +20,13 @@ void	ft_putstr(char *str)
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
-		i++;
+	i++;
 	}
 }
 
-/*int	main()
+/*int	main(void)
 {
-	char *zas = "funciona, please";
+	char	zas[] = "bananasplit";
+
 	ft_putstr(zas);
 }*/

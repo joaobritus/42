@@ -6,25 +6,33 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 09:44:38 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/07 09:50:53 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/12 10:47:07 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
 	int	zas;
 
-	zas = *a;
-	b* = *a; //normineteeeeee
+	zas = *b;
+	*b = *a;
+	*a = zas;
 }
 
-int	main(void)
+/*int	main(void)
 {
-	ft_swap(4, 5);
+	int x = 4;
+	int y = 5;
+	int *a;
+	int *b;
 
-	printf("%d", zas);
-	printf("%d", b*);
-}
+	a = &x;
+	b = &y;
+
+	ft_swap(a, b);
+
+	printf("%d", *a);
+	printf("%d", *b);
+}*/
