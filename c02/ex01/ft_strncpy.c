@@ -6,11 +6,11 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:59:39 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/09 16:50:39 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/13 09:58:35 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -29,3 +29,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+
+/*int	main(void)
+{
+	char	a[] = "banana";
+	char	b[] = "maca";
+	unsigned int	z = 3;
+
+	printf("%s", ft_strncpy(a, b, z));
+}*/

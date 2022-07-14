@@ -6,11 +6,11 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 10:54:13 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 11:01:12 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/13 10:22:31 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strupcase(char *str)
 {
@@ -24,13 +24,13 @@ char	*ft_strupcase(char *str)
 		else
 			i++;
 	}
-	return(str);
+	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char a[] = "olagoodbye";
 	char b[] = "olAgOodbYe";
-	printf("%s", ft_strupcase(a));
+	printf("%s\n", ft_strupcase(a));
 	printf("%s", ft_strupcase(b));
-}
+}*/

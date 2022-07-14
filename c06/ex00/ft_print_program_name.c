@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/10 18:46:08 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/13 11:22:21 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/14 11:09:15 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/14 11:18:19 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include <stdio.h>
 
-unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	main(int argc, char **argv)
 {
-	unsigned int	i;
-	unsigned int	y;
+	int	i;
 
-	y = 0;
 	i = 0;
-	while (src[i] != '\0')
+	if (argc == 1)
 	{
-		i++;
+		printf("%s", argv[i]);
 	}
-	if (size == 0)
-		return (i);
-	while (y < size -1)
-	{
-		dest[y] = src[y];
-		y++;
-	}
-	dest[y] = '\0';
-	return (i);
+	return (0);
 }
-
-/*int	main(void)
-{
-	char	a[] = "banana";
-	char	b[] = "maca";
-	unsigned int	x = 3;
-
-	printf("%d", ft_strlcpy(a, b, x));
-}*/

@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 19:06:23 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 19:07:03 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/13 09:05:36 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ void	ft_putnbr(int nb)
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
 	ft_putnbr(6666666);
 	ft_putnbr(-2147483648);
 	ft_putnbr(2147483647);
 	ft_putnbr(-55);
 	ft_putnbr(5);
-}*/
+}

@@ -6,11 +6,11 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 10:29:38 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 19:00:10 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/13 09:47:11 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -26,7 +26,7 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
 
 	char a[] = "maca";
@@ -34,4 +34,4 @@ int	main(void)
 
 	 ft_strcpy(a, b);
 	 printf("%s\n", a);
-}
+}*/

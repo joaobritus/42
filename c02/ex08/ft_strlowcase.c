@@ -6,15 +6,15 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 11:02:09 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/10 11:08:47 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/13 10:42:57 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strlowcase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -24,10 +24,10 @@ char	*ft_strlowcase(char *str)
 		else
 			i++;
 	}
-	return(str);
+	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char a[] = "era uma vez um pato";
 	char b[] = "ERA UMA VEZ UM PATO";
@@ -38,4 +38,4 @@ int	main(void)
 	printf("%s\n", ft_strlowcase(b));
 	printf("%s\n", ft_strlowcase(c));
 	printf("%s\n", ft_strlowcase(d));
-}
+}*/
