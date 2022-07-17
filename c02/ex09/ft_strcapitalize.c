@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 11:09:27 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 11:05:23 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:40:33 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char a[] = "ola o*MEu-nOME$E^bRI\tto,topas?123tudo.2bEm!";
 	printf("%s", ft_strcapitalize(a));
-}
+}*/

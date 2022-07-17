@@ -6,19 +6,27 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 11:19:22 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 11:25:14 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/17 08:44:41 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <unistd.h>
 
 int	main(int argc, char **argv)
 {
 	int	i;
+	int z;
 
 	i = 1;
-	while (argv[i])
+	while (i < argc)
 	{
-		printf("%s\n", argv[i]);
+		z = 0;
+		while (argv[i][z] != '\0')
+		{
+			write(1, &argv[i][z], 1);
+			z++;
+		}
+		write(1, "\n", 1);
 		i++;
 	}
+	return(0);
 }

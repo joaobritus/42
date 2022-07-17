@@ -6,12 +6,12 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 17:00:45 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 18:21:07 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/16 15:50:04 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+/*#include <stdio.h>
+#include <string.h>*/
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -31,21 +31,21 @@ char	*ft_strstr(char *str, char *to_find)
 				y++;
 			}
 			else
-				break;/*nunca vai chegar ao fim do loop enquanto tiver o break*/
+				break ;
 		}
 		if (to_find[y] == '\0')
 		{
-			return (str + i); //pointer a partir do index i
+			return (str + i);
 		}
 		i++;
 	}
 	return (0);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	a[] = "anderanolomanatanoa";
 	char	b[] = "ana";
 
 	printf("%s", ft_strstr(a, b));
-}
+}*/

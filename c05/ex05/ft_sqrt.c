@@ -1,32 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/16 14:33:30 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/16 18:27:44 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+int	ft_sqrt(int nb)
 {
-	int	i;
-	int	z;
+	int	a;
+	int	result;
+	int	counter;
 
-	i = argc - 1;
-	while (i > 0)
+	a = 1;
+	if (nb <= 0)
+		return (0);
+	else if (nb == 1)
+		return (1);
+	counter = 0;
+	if (nb > 1)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
+		while (nb > 0)
 		{
-			write(1, &argv[i][z], 1);
-			z++;
+			nb = nb - a;
+			a += 2;
+			counter++;
 		}
-		write(1, "\n", 1);
-		i--;
+		if (nb == 0)
+		{
+			return (counter);
+		}
+		return (0);
 	}
+	return (0);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	printf("%d\n", ft_sqrt(16));
+	printf("%d", ft_sqrt(17));
+}*/

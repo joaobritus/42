@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/16 08:16:49 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/16 14:31:06 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+#include <stdio.h>
+int	ft_recursive_factorial(int	nb)
 {
-	int	i;
-	int	z;
+	int result;
 
-	i = argc - 1;
-	while (i > 0)
+	result = 1;
+	if (nb > 0)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		result = nb * ft_recursive_factorial(nb - 1);
+		nb = nb -1;
 	}
+	if (nb < 0)
+	{
+		return (0);
+	}
+	return (result);
 }
+
+int	main(void)
+{
+	printf("%d", ft_recursive_factorial(3));
+}
+
+

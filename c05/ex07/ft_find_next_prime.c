@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/17 08:20:41 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/17 20:45:39 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+int	ft_find_next_prime(int nb)
 {
-	int	i;
-	int	z;
-
-	i = argc - 1;
-	while (i > 0)
+	int i;
+	
+	i = nb;
+	if (nb <= 1)
+		i++;
+	if (nb == 2 || nb == 3)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		return (i);
 	}
+	while (i <= 2147483647)
+	{
+		if (nb % 3 == 0)
+			i += 2;
+		if (nb % 2 == 0)
+		{
+			i++;
+		}
+		
+					
+
+
+
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%d", ft_find_next_prime(3));
 }

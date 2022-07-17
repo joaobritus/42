@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:20:07 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 16:42:13 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/16 09:39:11 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	unsigned int	destl;
 
 	destl = 0;
-	while (dest[destl])
+	while (dest[destl] != '\0')
 	{
 		destl++;
 	}
@@ -39,5 +39,6 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
         char a[] = "maca";
         char b[] = "banana";
 		unsigned int	n = 3;
-        printf("%s", ft_strncat(a, b, n));
+        printf("%s\n", ft_strncat(a, b, n));
+		printf("%s", strncat(a, b, n));
 }*/

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/16 08:00:32 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/16 14:02:48 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+#include <stdio.h>
+int	ft_iterative_factorial(int nb)
 {
-	int	i;
-	int	z;
+	unsigned int	result;
 
-	i = argc - 1;
-	while (i > 0)
+	result = 1;
+	while (nb > 0)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		result = result * nb;
+		nb--;
 	}
+	if (nb < 0)
+	{
+		return (0);
+	}
+	return (result);
+}
+
+int	main(void)
+{
+	printf("%i", ft_iterative_factorial(0));
 }

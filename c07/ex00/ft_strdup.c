@@ -1,32 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/15 14:51:03 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/15 15:06:45 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char **argv)
+int	strlen(char *src)
 {
-	int	i;
-	int	z;
+	int i;
 
-	i = argc - 1;
-	while (i > 0)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		i++;
 	}
+	return (i);
+}
+
+
+char	*ft_strdup(char *src)
+{
+	int i;
+	char *a;
+		
+	i = 0;
+	*a = malloc((strlen(src) + 1) * sizeof(char));
+	if (a == null)
+	{
+		return (0);
+	}
+
+	while (src[i] != '\0')
+	{
+		a[i] = src[i];
+		i++;
+	}
+	a[i] = '\0';
+	return (a);
 }

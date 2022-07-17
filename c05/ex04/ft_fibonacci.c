@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/16 08:59:34 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/16 14:06:58 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	ft_fibonacci(int	index)
 {
-	int	i;
-	int	z;
-
-	i = argc - 1;
-	while (i > 0)
+	if (index < 0)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		return (-1);
 	}
+	if (index < 2)
+	{
+		return (index);
+	}
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
+}
+
+int	main(void)
+{
+	printf("%d", ft_fibonacci(4));
 }

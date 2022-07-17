@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 19:55:28 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/12 15:53:20 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/16 09:36:09 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_strcat(char *dest, char *src)
 {
 	char a[] = "maca";
 	char b[] = "banana";
-	printf("%s", ft_strcat(a, b));
+	printf("%s\n", ft_strcat(a, b));
+	printf("%s", strcat(a, b));
 }*/

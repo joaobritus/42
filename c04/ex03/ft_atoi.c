@@ -6,17 +6,17 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 09:06:37 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/13 19:06:18 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/16 15:22:39 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 int	ft_atoi(char *str)
 {
-	int i;
-	int signal;
-	int number;
+	int	i;
+	int	signal;
+	int	number;
 
 	i = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 	}
 	return (number * signal);
 }
-int	main(int argc, char **argv)
+/*int	main(int argc, char **argv)
 {
 	int i = 1;
 	while ( argc > i)
@@ -48,4 +48,4 @@ int	main(int argc, char **argv)
 	printf("%d\n", ft_atoi(argv[i]));
 	i++;
 	}
-}
+}*/

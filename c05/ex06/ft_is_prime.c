@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 11:29:00 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/14 15:34:05 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/16 19:57:44 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/17 20:09:31 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+int	ft_is_prime(int nb)
 {
-	int	i;
-	int	z;
-
-	i = argc - 1;
-	while (i > 0)
+	int i;
+	
+	if (nb <= 1)
+		return (0);
+	i = 5;
+	if (nb == 2 || nb == 3)
 	{
-		z = 0;
-		while (argv[i][z] != '\0')
-		{
-			write(1, &argv[i][z], 1);
-			z++;
-		}
-		write(1, "\n", 1);
-		i--;
+		return (1);
 	}
+	if (nb % 2 == 0 || nb % 3 == 0)
+	{
+		return (0);
+	}
+	while (i <= (nb / 3))
+	{
+		
+		if (nb % i == 0)
+		{
+			return (0);
+		}
+		i+=2;
+	}
+	return (1);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%d", ft_is_prime(2147483647));
 }
