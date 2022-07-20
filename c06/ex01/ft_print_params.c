@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 11:19:22 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/17 08:44:41 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/18 20:23:30 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -14,7 +14,7 @@
 int	main(int argc, char **argv)
 {
 	int	i;
-	int z;
+	int	z;
 
 	i = 1;
 	while (i < argc)
@@ -28,5 +28,5 @@ int	main(int argc, char **argv)
 		write(1, "\n", 1);
 		i++;
 	}
-	return(0);
+	return (0);
 }

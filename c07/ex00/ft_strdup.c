@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 14:51:03 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/15 15:06:45 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:08:12 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strdup(char *src)
 	char *a;
 		
 	i = 0;
-	*a = malloc((strlen(src) + 1) * sizeof(char));
-	if (a == null)
+	a = malloc((strlen(src) + 1) * sizeof(char));
+	if (a == NULL)
 	{
 		return (0);
 	}

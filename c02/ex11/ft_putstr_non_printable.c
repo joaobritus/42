@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 12:33:56 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/17 18:39:51 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:35:56 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ void	convertohex(int x)
 void	ft_putstr_non_printable(char *str)
 {
 	int	i;
-	int	num;
-	int	resto;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -46,8 +44,8 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char a[] = "\nab12%$&^*cd\f";
 ft_putstr_non_printable(a);
-}*/
+}

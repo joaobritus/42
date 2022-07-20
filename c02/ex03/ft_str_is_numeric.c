@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 19:40:36 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/13 10:12:22 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/18 22:05:04 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ int	ft_str_is_numeric(char *str)
 	printf("%d", ft_str_is_numeric(a));
 	printf("%d", ft_str_is_numeric(b));
 	printf("%d", ft_str_is_numeric(c));
-}*/

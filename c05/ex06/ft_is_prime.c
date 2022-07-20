@@ -6,14 +6,14 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:57:44 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/17 20:09:31 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/19 11:50:22 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	int i;
-	
+	int	i;
+
 	if (nb <= 1)
 		return (0);
 	i = 5;
@@ -26,20 +26,19 @@ int	ft_is_prime(int nb)
 		return (0);
 	}
 	while (i <= (nb / 3))
-	{
-		
+	{	
 		if (nb % i == 0)
 		{
 			return (0);
 		}
-		i+=2;
+		i += 2;
 	}
 	return (1);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
 	printf("%d", ft_is_prime(2147483647));
-}
+}*/

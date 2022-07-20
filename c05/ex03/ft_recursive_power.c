@@ -6,21 +6,17 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 08:49:53 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/16 08:58:58 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/18 19:37:05 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
-int	ft_recursive_power(int	nb, int	power)
+int	ft_recursive_power(int nb, int power)
 {
-	int result;
+	int	result;
 
 	result = nb;
-	if (power > 1)
-	{
-		return(nb * ft_recursive_power(nb, (power - 1)));
-	}
 	if (power == 0)
 	{
 		return (1);
@@ -29,10 +25,14 @@ int	ft_recursive_power(int	nb, int	power)
 	{
 		return (0);
 	}
+	if (power > 1)
+	{
+		return (nb * ft_recursive_power(nb, (power - 1)));
+	}
 	return (result);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	printf("%d", ft_recursive_power(3, 3));
-}
+	printf("%d", ft_recursive_power(3, 4));
+}*/

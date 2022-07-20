@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 08:00:32 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/18 19:45:07 by jaragao-         ###   ########.fr       */
+/*   Created: 2022/07/19 20:58:10 by jaragao-          #+#    #+#             */
+/*   Updated: 2022/07/20 15:17:39 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-int	ft_iterative_factorial(int nb)
-{
-	unsigned int	result;
+#include <stdlib.h>
 
-	result = 1;
-	while (nb > 0)
+int	*ft_range(int min, int max)
+{
+	int comprimento;
+	int i;
+	int *array;
+
+	if (min >= max)
 	{
-		result = result * nb;
-		nb--;
+		return(0);
 	}
-	if (nb < 0)
+	comprimento = max - min;
+	array = malloc(comprimento * sizeof(int));
+	if (array == NULL)
 	{
 		return (0);
 	}
-	return (result);
+	i = 0;
+	while (i < comprimento)
+	{
+		array[i] = min + i;
+		i++;
+	}
+	return (array);
 }
-
-/*int	main(void)
-{
-	printf("%i", ft_iterative_factorial(5));
-}*/

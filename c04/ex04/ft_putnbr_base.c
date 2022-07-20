@@ -6,7 +6,7 @@
 /*   By: jaragao- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:23:41 by jaragao-          #+#    #+#             */
-/*   Updated: 2022/07/17 22:42:19 by jaragao-         ###   ########.fr       */
+/*   Updated: 2022/07/18 15:58:29 by jaragao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	isitvalid(char *base)
 		while (base[b] != '\0')
 		{
 			if (base[a] == base[b])
-			   return (0);	
+				return (0);
 			b++;
 		}
 		if (base[a] == '+' || base[a] == '-')
@@ -39,31 +39,33 @@ int	isitvalid(char *base)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int	i;
+	int		i;
+	long	nb;
 
+	nb = nbr;
 	if (isitvalid(base) == 0)
 		return ;
-	if (nbr < 0)
+	if (nb < 0)
 	{
 		write(1, "-", 1);
-		nbr = -nbr;
+		nb = -nb;
 	}	
 	i = 0;
 	while (base[i] != '\0')
 	{
 		i++;
 	}
-	if (nbr / i > 0)
+	if (nb / i > 0)
 	{
-		ft_putnbr_base((nbr / i), base);
+		ft_putnbr_base((nb / i), base);
 	}
-	write(1, &base[nbr % i], 1);
+	write(1, &base[nb % i], 1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	int a = 10;
-	char x[] = "abcdefg";
+	long a = -2147483648;
+	char x[] = "01";
 
 	ft_putnbr_base(a, x);
-}
+}*/
